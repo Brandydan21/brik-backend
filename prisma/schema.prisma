@@ -8,10 +8,33 @@ datasource db {
 }
 
 model User {
-    id           Int      @id @default(autoincrement())
-    email        String   @unique
+    id Int @id @default(autoincrement())
+    email String @unique
     passwordHash String
-    name         String?
-    age          Int?
-    createdAt    DateTime @default(now())
+    name String
+    age Int
+    gender String
+    bio String
+    location String
+    rating String @default("0")
+    createdAt DateTime @default(now())
+
+    preference UserPreference? 
 }
+
+model UserPreference {
+    id Int @id @default(autoincrement())
+    userId Int @unique
+    preferredLocation String
+    minBudget Int
+    maxBudget  Int
+    petsAllowed Boolean
+    smokingAllowed  Boolean
+    minAge Int
+    maxAge Int
+    cleanlinessLevel String // e.g., 'low', 'medium', 'high'
+    lifestyle String // e.g., 'quiet', 'social', 'mixed'
+    
+    user User @relation(fields: [userId], references: [id])
+}
+  

@@ -51,10 +51,13 @@ http://localhost:3000/api/auth/register
 req body example
 ```
 {
-  "email": "alice@example.com",
-  "password": "password123",
-  "name": "Alice",
-  "age": 25
+  "email": "user@example.com",
+  "password": "securePassword123",
+  "name": "John Doe",
+  "age": 28,
+  "gender": "Male",
+  "bio": "Love building things and coding.",
+  "location": "Melbourne, Australia"
 }
 ```
 res body example
