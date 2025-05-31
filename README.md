@@ -59,19 +59,29 @@ req body example
   "bio": "Love building things and coding.",
   "location": "Melbourne, Australia"
 }
++ Upload an image with key 'profileImage' (this will be used for profile pic image)
+
 ```
 res body example
 ```
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ4NDExNTQwLCJleHAiOjE3NDkwMTYzNDB9.8nnQSbbLPepJcH6ZxEewVDegJLptpLKfhYXx3O8RXoo",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJzdGV2ZW5AZXhhbXBsZS5jb20iLCJuYW1lIjoiU3RldmVuIFN0b25lIiwiaWF0IjoxNzQ4NjkzOTUwLCJleHAiOjE3NDkyOTg3NTB9.xeU1r-QVCWwHJ0b0JxTyv6Xx_piynlfSKTPIczrOBo8",
     "user": {
-        "id": 1,
-        "email": "alice@example.com",
-        "name": "Alice",
-        "age": 25
+        "id": 2,
+        "email": "steven@example.com",
+        "name": "Steven Stone",
+        "age": 32,
+        "gender": "Male",
+        "bio": "Gym owner",
+        "location": "Sydney",
+        "profileImage": "http://localhost:3000/user-images/profileImage-1748693950121-370460567.jpg",
+        "rating": "0",
+        "createdAt": "2025-05-31T12:19:10.218Z"
     }
 }
 ```
+- The profileImage url allows us to directly access the image
+
 2. Login
 url:
 ```

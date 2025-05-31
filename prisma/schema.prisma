@@ -17,6 +17,7 @@ model User {
     bio String
     location String
     rating String @default("0")
+    profileImage String? 
     createdAt DateTime @default(now())
 
     preference UserPreference? 

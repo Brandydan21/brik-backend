@@ -10,6 +10,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(express.json());
+app.use('/user-images', express.static('user-images')); // serve image files
 
 // mounts our routes
 registerRoutes(app); 
