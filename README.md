@@ -46,7 +46,7 @@ npm run dev
 1. Sign-up
 url:
 ```
-http://localhost:3000/api/auth/register
+http://localhost:3000/auth/register
 ```
 req body example
 ```
@@ -75,7 +75,7 @@ res body example
 2. Login
 url:
 ```
-http://localhost:3000/api/auth/login
+http://localhost:3000/auth/login
 ```
 req body example
 ```
