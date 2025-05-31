@@ -27,8 +27,12 @@ export const register = async (req, res) => {
     },
   });
 
-  const token = generateToken(user.id);
-
+  const token = generateToken({
+    id: user.id,
+    email: user.email,
+    name: user.name
+  });
+  
   res.status(201).json({
     token,
     user: {
@@ -54,8 +58,12 @@ export const login = async (req, res) => {
   const isMatch = await bcrypt.compare(password, user.passwordHash);
   if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
-  const token = generateToken(user.id);
-
+  const token = generateToken({
+    id: user.id,
+    email: user.email,
+    name: user.name
+  });
+  
   res.json({
     token,
     user: {
