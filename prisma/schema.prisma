@@ -20,6 +20,7 @@ model User {
     createdAt DateTime @default(now())
 
     preference UserPreference? 
+    listing Listing?
 }
 
 model UserPreference {
@@ -34,7 +35,23 @@ model UserPreference {
     maxAge Int
     cleanlinessLevel String // e.g., 'low', 'medium', 'high'
     lifestyle String // e.g., 'quiet', 'social', 'mixed'
-    
+
+    user User @relation(fields: [userId], references: [id])
+}
+  
+
+
+model Listing {
+    id Int @id @default(autoincrement())
+    userId Int @unique
+    description String
+    location String
+    rentPriceWeekly Decimal 
+    availabilityDate DateTime 
+    petsAllowed Boolean
+    imageUrl String 
+    createdAt DateTime @default(now()) 
+  
     user User @relation(fields: [userId], references: [id])
 }
   

@@ -98,7 +98,7 @@ res body example
 ```
 
 3. Create Userpreferences 
-POST http://localhost:3000/preferences
+POST http://localhost:3000/user/preferences
 - `require Authorization header : Bearer <JWT TOKEN>`
 example body
 ```
@@ -116,7 +116,7 @@ example body
 ```
 
 4. Update Userpreferences 
-PUT http://localhost:3000/preferences
+PUT http://localhost:3000/user/preferences
 - `require Authorization header : Bearer <JWT TOKEN>`
 example body
 ```
@@ -134,10 +134,45 @@ example body
 ```
 
 5. Get Userpreferences 
-GET http://localhost:3000/preferences
+GET http://localhost:3000/user/preferences
 - `require Authorization header : Bearer <JWT TOKEN>`
 
 6. Delete Userpreferences 
-DELETE http://localhost:3000/preferences
+DELETE http://localhost:3000/user/preferences
 - `require Authorization header : Bearer <JWT TOKEN>`
 
+7. Get userListing
+GET http://localhost:3000/user/listings
+- `require Authorization header : Bearer <JWT TOKEN>`
+
+8. Create userListing
+POST http://localhost:3000/user/listings
+example body
+- `require Authorization header : Bearer <JWT TOKEN>`
+```
+{
+  "description": "Cozy 1-bedroom unit with balcony and plenty of natural light. Close to shops and public transport.",
+  "location": "Brunswick, VICs",
+  "rentPriceWeekly": 320.00,
+  "availabilityDate": "2025-06-15",
+  "petsAllowed": true,
+  "imageUrl": "https://example.com/images/unit.jpg"
+}
+```
+9. Update userListing
+PUT http://localhost:3000/user/listings
+- `require Authorization header : Bearer <JWT TOKEN>`
+```
+{
+  "description": "Cozy 1-bedroom unit with balcony and plenty of natural light. Close to shops and public transport.",
+  "location": "Brunswick, VICs",
+  "rentPriceWeekly": 320.00,
+  "availabilityDate": "2025-06-15",
+  "petsAllowed": true,
+  "imageUrl": "https://example.com/images/unit.jpg"
+}
+```
+
+10. Delete userListing
+DELETE http://localhost:3000/user/listings
+- `require Authorization header : Bearer <JWT TOKEN>`
