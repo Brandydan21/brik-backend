@@ -41,7 +41,7 @@ npx prisma migrate dev --name init
 ```
 npm run dev
 ```
-API ENDPOINTS
+# API ENDPOINTS
 
 1. Sign-up
 url:
@@ -96,3 +96,48 @@ res body example
     }
 }
 ```
+
+3. Create Userpreferences 
+POST http://localhost:3000/preferences
+- `require Authorization header : Bearer <JWT TOKEN>`
+example body
+```
+{
+  "preferredLocation": "Melbourne, VIC",
+  "minBudget": 150,
+  "maxBudget": 300,
+  "petsAllowed": true,
+  "smokingAllowed": false,
+  "minAge": 21,
+  "maxAge": 32,
+  "cleanlinessLevel": "high",
+  "lifestyle": "quiet"
+}
+```
+
+4. Update Userpreferences 
+PUT http://localhost:3000/preferences
+- `require Authorization header : Bearer <JWT TOKEN>`
+example body
+```
+{
+  "preferredLocation": "Melbourne, VIC",
+  "minBudget": 150,
+  "maxBudget": 300,
+  "petsAllowed": true,
+  "smokingAllowed": false,
+  "minAge": 21,
+  "maxAge": 32,
+  "cleanlinessLevel": "high",
+  "lifestyle": "quiet"
+}
+```
+
+5. Get Userpreferences 
+GET http://localhost:3000/preferences
+- `require Authorization header : Bearer <JWT TOKEN>`
+
+6. Delete Userpreferences 
+DELETE http://localhost:3000/preferences
+- `require Authorization header : Bearer <JWT TOKEN>`
+
