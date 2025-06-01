@@ -166,8 +166,8 @@ example body
   "rentPriceWeekly": 320.00,
   "availabilityDate": "2025-06-15",
   "petsAllowed": true,
-  "imageUrl": "https://example.com/images/unit.jpg"
 }
++ add images up to five with the name listingImage1, listingImage2... up to listingImage5
 ```
 9. Update userListing
 PUT http://localhost:3000/user/listings
@@ -179,8 +179,9 @@ PUT http://localhost:3000/user/listings
   "rentPriceWeekly": 320.00,
   "availabilityDate": "2025-06-15",
   "petsAllowed": true,
-  "imageUrl": "https://example.com/images/unit.jpg"
 }
++ add images to update up to five with the name listingImage1, listingImage2... up to listingImage5
+- If you want to update listingImage1, then assign then new image to the listingImage1 name to allow for updates
 ```
 
 10. Delete userListing

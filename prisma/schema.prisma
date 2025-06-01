@@ -50,7 +50,7 @@ model Listing {
     rentPriceWeekly Decimal 
     availabilityDate DateTime 
     petsAllowed Boolean
-    imageUrl String 
+    imageUrls String[]
     createdAt DateTime @default(now()) 
   
     user User @relation(fields: [userId], references: [id])
