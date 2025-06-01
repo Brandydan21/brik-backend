@@ -186,3 +186,24 @@ PUT http://localhost:3000/user/listings
 10. Delete userListing
 DELETE http://localhost:3000/user/listings
 - `require Authorization header : Bearer <JWT TOKEN>`
+
+10. Update User 
+url:
+```
+http://localhost:3000/user/update
+```
+req body example
+- `require Authorization header : Bearer <JWT TOKEN>`
+```
+{
+  "email": "user@example.com",
+  "password": "securePassword123",
+  "name": "John Doe",
+  "age": 28,
+  "gender": "Male",
+  "bio": "Love building things and coding.",
+  "location": "Melbourne, Australia"
+}
++ Upload an image with key 'profileImage' (this will be used for profile pic image)
+
+```
